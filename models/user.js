@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     required: false,
     minlength: [2, 'Минимальная длина поля "name" - 2'], // минимальная длина имени — 2 символа
     maxlength: [30, 'Максимальная длина поля "name" - 30'], // а максимальная — 30 символов
-    default: 'Жак-Ив Кусто',
+    default: 'Ваш первый фильм',
   },
   email: {
     type: String,

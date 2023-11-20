@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
-const cardRouter = require('./routes/cards');
-const userRouter = require('./routes/users');
+const movieRouter = require('./routes/movie');
+const userRouter = require('./routes/user');
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const { signinValidate, signupValidate } = require('./middlewares/validation');
@@ -24,7 +24,7 @@ const limiter = rateLimit({
 //
 // Создаем сервер
 //
-const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
+const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 const app = express();
 
 app.use(bodyParser.json());
@@ -67,7 +67,7 @@ app.post('/signup', signupValidate, createUser);
 app.use(auth);
 
 app.use('/', userRouter);
-app.use('/', cardRouter);
+app.use('/', movieRouter);
 
 //
 // При переходе по несуществюущему пути
