@@ -1,12 +1,12 @@
 const allowedCors = [
-    'http://miklekuzichev.mesto.nomoredomainsrocks.ru',
-    'https://miklekuzichev.mesto.nomoredomainsrocks.ru',
+    'http://api.miklekuzichev.movies.nomoredomainsmonster.ru',
+    'https://api.miklekuzichev.movies.nomoredomainsrocks.ru',
     'http://localhost:3000',
     'https://localhost:3000',
   ];
-  
+
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
-  
+
   module.exports = (req, res, next) => {
     const { origin } = req.headers;
     const { method } = req;
@@ -22,4 +22,3 @@ const allowedCors = [
     }
     next();
   };
-  
