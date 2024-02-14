@@ -1,6 +1,6 @@
 const allowedCors = [
-    'http://miklekuzichev.movies.nomoredomainsmonster.ru',
-    'https://miklekuzichev.movies.nomoredomainsrocks.ru',
+    'http://miklekuzichev.movies.nomoredomainswork.ru',
+    'https://miklekuzichev.movies.nomoredomainswork.ru',
     'http://localhost:3000',
     'https://localhost:3000',
   ];
